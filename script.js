@@ -42,11 +42,22 @@ function colorin(){
     }));
 }
 
+document.addEventListener("DOMContentLoaded", function(){
+    let btn = document.querySelector(".btncolor");
+    btn.dispatchEvent(new Event("click"));
+});
+
 const btncolor = document.querySelector('.btncolor');
-btncolor.addEventListener('click',colorin);
+btncolor.addEventListener('click',function(){
+    btncolor.classList.add("clicked");
+    colorin();
+});
 
 const btnclear = document.querySelector('.btnclear');
-btnclear.addEventListener('click', clearBoard);
+btnclear.addEventListener('click', function(){
+    btnclear.classList.add("clicked");
+    clearBoard();
+});
 
 const sliderval = document.querySelector('.sliderval');
 const rangeValue = document.querySelector('.rangeValue');
@@ -54,6 +65,8 @@ const rangeValue = document.querySelector('.rangeValue');
 gridOfDiv(50,50);
 
 sliderval.oninput = function(){
+    btncolor.classList.remove("clicked");
+    btnclear.classList.remove("clicked");
     const container = document.querySelector('.container');
     container.innerHTML = '';
     rangeValue.innerText = this.value;
