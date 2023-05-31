@@ -10,7 +10,7 @@
     width: 500px;
     display: flex;
     border-width: 1px;
-    border-color: black;
+    border-color: rgb(160, 157, 157);
     border-radius: 3px;
     border-style: solid;
     /*flex-wrap: wrap;*/
@@ -46,4 +46,34 @@
 .header p {
     text-align: center;
     margin-bottom: 0px;
+}
+
+.btncolor {
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px 30px 10px;
+    color: rgb(243, 246, 248);
+    background-color: rgb(153, 175, 172);
+}
+
+.btnclear {
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px 30px 10px;
+    color: rgb(243, 246, 248);
+    background-color: rgb(153, 175, 172);
+}
+
+.clicked {
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px 30px 10px;
+    color: rgb(243, 246, 248);
+    background-color: rgb(83, 104, 104);
 }
